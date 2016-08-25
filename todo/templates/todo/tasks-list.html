@@ -1,0 +1,63 @@
+{% load i18n staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>{% trans 'Todo list' %}</title>
+        <link rel="stylesheet" href="{% static 'todo/base.css' %}">
+</head>
+
+<body>
+
+        <section id="todoapp">
+                <header id="header">
+                        <h1>{% trans 'My TO_DO List' %}</h1>
+						<form method="post" action="{% url 'task-create' %}" >
+							{% csrf_token %}
+                        	<input id="new-todo" placeholder="{% trans 'ajouter une chose a faire ... ?' %}" name="content" autofocus>
+						</form>
+                </header>
+
+                <section id="main">
+						<form method="post" action="{% url 'tasks-toggle' %}">
+							{% csrf_token %}
+                			<input id="toggle-all" type="checkbox" onclick="this.parentNode.submit();">
+						</form>
+                		<label for="toggle-all">{% trans 'Mark all as complete' %}</label>
+                		<ul id="todo-list">
+							{% for task in object_list %}
+							<li{% if task.is_resolved %} class="completed"{% endif %}>
+								<div class="view">
+									<form method="post" action="{% url 'task-toggle' task.id %}">
+										{% csrf_token %}
+										<input class="toggle-all" type="checkbox"{% if task.is_resolved %} checked="checked"{% endif %} onclick="this.parentNode.submit();">
+									</form>
+									<label>{{ task.content }}</label>
+									<form method="post" action="{% url 'task-delete' task.id %}">
+										{% csrf_token %}
+										<button class="destroy" onclick="this.parentNode.submit();"></button>
+									</form>
+								
+								</div>
+							<input class="edit" value="{{ task.content }}">		
+							</li>
+							{% endfor %}
+                		</ul>
+                </section>
+
+                <footer id="footer">
+					<form action="{% url 'tasks-clear' %}" method="post">
+						{% csrf_token %}
+						<button id="clear-completed" onclick="this.parentNode.submit();">{% trans 'Clear completed' %}</button>
+					</form>
+                </footer>
+        </section>
+
+        <footer id="info">
+                <br>
+				<br>
+				<br>
+				<img src="../../../static/todo/images/py-ranha.png"   height="102" width="102" style="border:0px;" />
+        </footer>
+</body>
+</html>
