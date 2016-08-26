@@ -13,20 +13,20 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-<<<<<<< HEAD
+
 from django.conf.urls import url , include
-=======
+
 
 from django.conf.urls import url, include
 
->>>>>>> f23ae85befe02d3777ba15f148cf215727696739
+
 from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-<<<<<<< HEAD
+
     url(r'^todo_app/', include('todo.urls')),
-=======
+
     url(r'^todo_app/', include('todo.urls'))
->>>>>>> f23ae85befe02d3777ba15f148cf215727696739
+
 ]
