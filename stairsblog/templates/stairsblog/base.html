@@ -1,0 +1,37 @@
+{% load staticfiles %}
+
+<html>
+	<head>
+		<!--    si on veut un style importe depuis le web
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">   -->
+
+		<meta charset="utf-8">
+		<title><B>Le petit blog des escaliers ...</B></title>
+		<!--  <link rel="stylesheet" href="../../../static/blog/stairsblog-css/base.css">   -->
+		<!--  ici un style css indique par un chemin en dur... beurk  -->
+		<!--   plus classe ci-dessous  -->
+		<link rel="stylesheet" href="{% static 'stairsblog/stairsblog-css/base.css' %}">
+		<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">  
+			
+	</head>
+
+	<body>
+		<div class="page-header">
+			<h2><a href="{% url 'stairsblog_url'%}">Le petit blog des escaliers ...</a></h2>
+			<img src="{% static  'blog/images/bombe.png' %}" alt="pour ceux qui n'ont rien contre un quickie sur les marches ..." style="border:0px;" /></a>
+			<br><br>
+			<a href="{% url 'post_new' %}" align="center">NOUVEAU POST</a>  
+		</div>
+
+		<div class="content container">
+				<div class="row">
+					<div class="col-md-8">
+						{% block content %}
+						{% endblock %}
+					</div>
+				</div>
+			</div>
+	</body>
+	
+</html>

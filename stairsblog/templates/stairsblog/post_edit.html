@@ -1,0 +1,11 @@
+{% extends 'stairsblog/base.html' %}
+
+{% block content %}
+    <h1>nouveau post</h1>
+    <form method="POST" class="post-form">{% csrf_token %} 
+		
+        {{ form.as_p }}
+		
+        <button type="submit" ><b><u>Save</b></u></button>
+    </form>
+{% endblock %}

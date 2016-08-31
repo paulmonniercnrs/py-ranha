@@ -1,0 +1,130 @@
+{% load staticfiles %}
+
+<html>
+	<head>
+		<title>PYRANHA's PLACE</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<!--  ******  here the CSS from us -->
+		<link rel="stylesheet" type="text/css" href="{% static 'navigation/css/style.css' %}">
+		<!-- modernizr enables HTML5 elements and feature detects -->
+		<script type="text/javascript" src="{% static 'navigation/js/modernizr-1.5.min.js'%}"></script>
+	</head>
+
+	<body >
+
+		<div id="conteneur">
+			<div id="conteneur2">
+				<div  id="main">
+
+					<h1 style="height: 50px; margin-top: 4px;">
+
+					</h1>
+					<div style="margin-top: -90px;" id="logo">
+						<div style="height: 6px; margin-top: -1px;" id="logo_text">
+							<table style="width: 100%; height: 0%;" border="0">
+								<tbody>
+									<tr>
+										<td style="width: 100%; height: 0%; vertical-align: bottom; background-color: transparent;">
+											<h1>PYRANHA'S... Apps</h1>
+										</td>
+										<td style="width: 100%; height: 0%; vertical-align: bottom; background-color: transparent;">
+										</td>
+										<td style="width: 100%; height: 0%; background-color: transparent;">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<h2 style="margin-top: -33px; height: 47px;">The sandbox for Pyranha's django-python tips & tricks ...</h2>
+						</div>
+					</div>
+									 
+				<div id="site_content">
+					<!--  -->
+					<!-- ***************  HERE IS THE START FOR SITE CONTENT (starting with a full span image) *********-->
+					<!--  -->
+
+					<div  class="content">
+						<!--  -->
+						<!-- *********   HERE IS THE START FOR CONTENT OF THE PAGE *******************-->
+						<!--  -->
+										
+						
+						<img  src="{% static 'navigation/images/cameleon.png'%}" width=110 height=60>
+						<img  src="{% static 'navigation/images/cameleon.png'%}" width=110 height=60>
+						<img  src="{% static 'navigation/images/cameleon.png'%}" width=110 height=60>
+						<img  src="{% static 'navigation/images/cameleon.png'%}" width=110 height=60>
+						<img  src="{% static 'navigation/images/cameleon.png'%}" width=110 height=60>
+						<img  src="{% static 'navigation/images/cameleon.png'%}" width=110 height=60>
+						<img  src="{% static 'navigation/images/cameleon.png'%}" width=110 height=60>
+						<img  src="{% static 'navigation/images/cameleon.png'%}" width=110 height=60>
+
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<h5>
+						<br>
+						<br>
+						
+						<br>
+						My TODO_list &nbsp&nbsp&nbsp&nbsp-&nbsp&nbsp <a href="{% url 'tasks-list' %}">todo_app</a>
+						<br>
+						<br>
+						Le blog dans les escaliers &nbsp&nbsp&nbsp&nbsp-&nbsp&nbsp <a href="{% url 'stairsblog_url' %}">stairsblog_app</a>
+						<br>
+						<br>
+						Simple_todo &nbsp&nbsp&nbsp&nbsp-&nbsp&nbsp <a href="{% url 'todo_idx' %}">Simpletodo_app</a>
+						<br>
+						<br>
+						Sign in template &nbsp&nbsp&nbsp&nbsp-&nbsp&nbsp <a href="{% url 'login' %}">login_app</a>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<p style="text-align: justify;"><br></p>
+						source code available at : <a href="https://github.com/paulmonniercnrs/py-ranha" 
+						onclick="window.open(this.href);return false">https://github.com/paulmonniercnrs/py-ranha</a>
+						<p style="text-align: justify;">Enjoy ! "</p>
+
+						<br>
+						<p style="text-align: justify;"><br></p>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						<img  src="{% static 'navigation/images/py-ranha.png'%}" width=60 height=60>
+						</h5>
+					</div>
+				</div>
+				<!--  -->
+				<!-- *******************************   HERE IS THE copyright **contact  ***  legal   *****************-->
+				<!--  -->
+				<center>
+					<p><sub>
+					<br>
+					<br>
+					PY-RANHA - 2016  
+					<img class="img_footer" src="{% static 'navigation/images/py-ranha.png'%}" width=42 height=42 align="absmiddle" >
+					- attention poisson dangeureux  -   <°)))))<
+					</sub></p>
+				</center>
+			</div>
+			
+
+		</div>
+
+	</body>
+</html>
